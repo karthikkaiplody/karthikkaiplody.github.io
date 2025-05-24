@@ -1,0 +1,1149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+:root {
+  --light-bg-color: #FFFFFF;
+  --light-text-color: #343a40; /* Darker gray for better contrast */
+  --light-primary-color: #007bff; 
+  --light-secondary-color: #6c757d;
+  --light-accent-color: #17a2b8; 
+  --light-card-bg-color: #f8f9fa;
+  --light-border-color: #dee2e6;
+  --light-nav-bg-color: #ffffff; /* White for nav */
+  --light-nav-text-color: var(--light-primary-color);
+  --light-nav-logo-text-color: var(--light-primary-color); /* For logo */
+  --light-nav-hover-color: var(--light-accent-color);
+  --light-footer-bg-color: #e9ecef;
+  --light-footer-text-color: #495057;
+  --light-heading-color: #212529; /* Slightly darker for headings */
+
+  --font-family-body: 'Roboto', sans-serif;
+  --font-family-heading: 'Montserrat', sans-serif;
+
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 1.25rem;
+  --font-size-sm: 0.875rem;
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.75rem;
+
+  --line-height-base: 1.6;
+  --line-height-heading: 1.3;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--light-text-color);
+    background-color: var(--light-bg-color);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-heading);
+    font-weight: 700;
+    line-height: var(--line-height-heading);
+    color: var(--light-heading-color);
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+h1 { font-size: var(--font-size-h1); }
+h2 { font-size: var(--font-size-h2); }
+h3 { font-size: var(--font-size-h3); }
+/* Add more if needed */
+
+/* Paragraphs */
+p {
+    margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+    color: var(--light-accent-color);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: var(--light-primary-color);
+    text-decoration: underline;
+}
+
+/* Buttons */
+button, 
+input[type="submit"],
+.button { /* Adding a class for button-like links */
+    display: inline-block;
+    font-family: var(--font-family-heading);
+    font-weight: 700;
+    color: #fff;
+    background-color: var(--light-primary-color);
+    border: 1px solid var(--light-primary-color);
+    padding: 0.75rem 1.5rem;
+    font-size: var(--font-size-base);
+    border-radius: 0.3rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+button:hover,
+input[type="submit"]:hover,
+.button:hover {
+    background-color: var(--light-accent-color);
+    border-color: var(--light-accent-color);
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Lists */
+ul, ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem; /* Default padding for indentation */
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+/* Navigation Bar */
+header {
+    background: var(--light-nav-bg-color);
+    color: var(--light-nav-text-color);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle shadow for nav */
+    position: sticky; /* Make nav sticky */
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    max-width: 1100px;
+    margin: auto;
+}
+
+nav .logo {
+    font-size: 1.75rem; /* Increased logo size */
+    font-weight: 700;
+    font-family: var(--font-family-heading);
+    text-decoration: none;
+    color: var(--light-nav-logo-text-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding-left: 0; /* Reset padding for nav ul */
+}
+
+nav ul li {
+    margin-left: 1.75rem; /* Increased spacing */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--light-nav-text-color);
+    font-weight: 700; /* Bolder nav links */
+    font-size: var(--font-size-base);
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--light-nav-hover-color);
+    text-decoration: none; /* No underline on hover for nav links */
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0.5rem; /* Add padding for easier tap */
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background: var(--light-nav-text-color); /* Use nav text color */
+    margin-bottom: 5px;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+
+/* Responsive Styles for Navigation */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 100%; /* Position below the header */
+        left: 0;
+        background: var(--light-nav-bg-color);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        padding: 1rem 0; /* Add padding when expanded */
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 1rem 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+/* Main Content Area */
+main {
+    padding: 2rem;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Sections */
+section {
+    margin-bottom: 2.5rem; /* Increased margin */
+    padding: 2.5rem; /* Increased padding */
+    background-color: var(--light-bg-color); /* Sections same as body bg, cards will differ */
+    border-radius: 0; /* Remove default border-radius for sections */
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */ /* Removed default shadow for sections */
+}
+
+/* Placeholder content styles (can be removed or refined later) */
+#about, #skills, #projects, #blog, #contact {
+    /* padding: 20px; */ /* Already handled by section padding */
+    /* border: 1px solid var(--light-border-color); */ /* Remove border if sections are distinct by cards */
+    /* margin-bottom: 10px; */ /* Handled by section margin */
+}
+
+/* Card Style */
+.card {
+    background-color: var(--light-card-bg-color);
+    border: 1px solid var(--light-border-color);
+    border-radius: 0.5rem; /* 8px */
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08); /* Softer shadow */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    transform: translateY(-3px);
+}
+
+.card h3 { /* Styling for card titles */
+    color: var(--light-primary-color);
+    margin-bottom: 0.75rem;
+}
+
+/* Blog specific styles (can be expanded) */
+#blog-posts-container .card, main article.card { /* Assuming blog posts and single post use .card */
+    /* Specific card styling for blog if needed, or rely on general .card */
+}
+
+.blog-post-link { /* To style links to blog posts if they are not cards themselves */
+    display: block;
+    color: var(--light-accent-color);
+    text-decoration: none;
+    padding: 0.75rem 0;
+    border-bottom: 1px dashed var(--light-border-color);
+    font-weight: 700;
+}
+.blog-post-link:hover {
+    background-color: var(--light-card-bg-color);
+    color: var(--light-primary-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 1rem; /* Increased padding */
+    background: var(--light-footer-bg-color);
+    color: var(--light-footer-text-color);
+    margin-top: 3rem; /* Increased margin */
+    border-top: 1px solid var(--light-border-color);
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+/*
+------------------------------------
+DARK MODE STYLES
+------------------------------------
+*/
+
+body.dark-mode {
+  /* Dark Mode Color Palette */
+  --dark-bg-color: #1a1d24; /* Dark slate blue/gray */
+  --dark-text-color: #e0e0e0; /* Light gray for text */
+  --dark-primary-color: #0d6efd; /* Bootstrap blue, often works well on dark */
+  --dark-secondary-color: #5a6268; /* Lighter gray than bg */
+  --dark-accent-color: #17a2b8; /* Teal, often works well */
+  --dark-card-bg-color: #2c303a; /* Slightly lighter dark slate */
+  --dark-border-color: #495057; /* Mid-gray for borders */
+  --dark-nav-bg-color: #212529; /* Very dark gray, almost black for nav */
+  --dark-nav-text-color: var(--dark-primary-color); 
+  --dark-nav-logo-text-color: var(--dark-primary-color);
+  --dark-nav-hover-color: var(--dark-accent-color);
+  --dark-footer-bg-color: #212529; /* Same as nav */
+  --dark-footer-text-color: #adb5bd; /* Lighter gray for footer text */
+  --dark-heading-color: #f8f9fa; /* Very light gray / white for headings */
+
+  /* Override light mode variables when .dark-mode is active */
+  --light-bg-color: var(--dark-bg-color);
+  --light-text-color: var(--dark-text-color);
+  --light-primary-color: var(--dark-primary-color);
+  --light-secondary-color: var(--dark-secondary-color);
+  --light-accent-color: var(--dark-accent-color);
+  --light-card-bg-color: var(--dark-card-bg-color);
+  --light-border-color: var(--dark-border-color);
+  --light-nav-bg-color: var(--dark-nav-bg-color);
+  --light-nav-text-color: var(--dark-nav-text-color);
+  --light-nav-logo-text-color: var(--dark-nav-logo-text-color);
+  --light-nav-hover-color: var(--dark-nav-hover-color);
+  --light-footer-bg-color: var(--dark-footer-bg-color);
+  --light-footer-text-color: var(--dark-footer-text-color);
+  --light-heading-color: var(--dark-heading-color);
+}
+
+/* Specific adjustments for dark mode */
+
+body.dark-mode a {
+    color: var(--dark-accent-color);
+}
+
+body.dark-mode a:hover {
+    color: var(--dark-primary-color);
+}
+
+/* Buttons in Dark Mode */
+body.dark-mode button,
+body.dark-mode input[type="submit"],
+body.dark-mode .button {
+    background-color: var(--dark-primary-color);
+    border-color: var(--dark-primary-color);
+    color: #ffffff; /* Ensure text is light on dark primary */
+}
+
+body.dark-mode button:hover,
+body.dark-mode input[type="submit"]:hover,
+body.dark-mode .button:hover {
+    background-color: var(--dark-accent-color);
+    border-color: var(--dark-accent-color);
+    color: #ffffff;
+}
+
+/* Navigation Bar in Dark Mode */
+body.dark-mode header {
+    box-shadow: 0 2px 4px rgba(255,255,255,0.03); /* Lighter shadow for dark nav */
+}
+
+body.dark-mode .menu-toggle span {
+    background: var(--dark-nav-text-color); /* Ensure hamburger icon is visible */
+}
+
+body.dark-mode @media (max-width: 768px) {
+    nav ul {
+        background: var(--dark-nav-bg-color);
+        box-shadow: 0 2px 4px rgba(255,255,255,0.03);
+    }
+}
+
+/* Cards in Dark Mode */
+body.dark-mode .card {
+    background-color: var(--dark-card-bg-color);
+    border-color: var(--dark-border-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Darker, more subtle shadow for dark cards */
+}
+
+body.dark-mode .card:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    /* transform: translateY(-3px); // Keep or remove based on preference */
+}
+
+body.dark-mode .card h3 {
+    color: var(--dark-primary-color);
+}
+
+/* Blog Post Links in Dark Mode */
+body.dark-mode .blog-post-link {
+    color: var(--dark-accent-color);
+    border-bottom-color: var(--dark-border-color);
+}
+
+body.dark-mode .blog-post-link:hover {
+    background-color: var(--dark-card-bg-color); /* Or a slightly lighter shade of dark-card-bg */
+    color: var(--dark-primary-color);
+}
+
+/* Horizontal Rule in Dark Mode */
+body.dark-mode hr {
+  border-color: var(--dark-border-color);
+}
+
+/*
+------------------------------------
+SECTION SPECIFIC STYLES
+------------------------------------
+*/
+
+/* About Section */
+#about {
+  text-align: center; /* Center align content */
+}
+
+.profile-image {
+  width: 150px; /* Adjust size as needed */
+  height: 150px;
+  border-radius: 50%; /* Circular image */
+  object-fit: cover; /* Ensure image covers the area well */
+  margin-bottom: 1.5rem;
+  border: 3px solid var(--light-border-color);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+body.dark-mode .profile-image {
+  border-color: var(--dark-border-color);
+  box-shadow: 0 4px 8px rgba(255,255,255,0.05);
+}
+
+#about h1 { /* Name */
+  font-size: var(--font-size-h1); /* Use existing h1 size */
+  margin-bottom: 0.25rem;
+}
+
+.text-primary { /* For highlighting parts of text, like the last name */
+  color: var(--light-primary-color);
+}
+
+body.dark-mode .text-primary {
+  color: var(--dark-primary-color);
+}
+
+.subheading {
+  font-size: var(--font-size-lg);
+  color: var(--light-secondary-color);
+  margin-bottom: 1.5rem;
+  font-family: var(--font-family-body);
+}
+
+body.dark-mode .subheading {
+  color: var(--dark-secondary-color);
+}
+
+.lead { /* For the main descriptive paragraph */
+  font-size: var(--font-size-lg);
+  font-weight: 400;
+  line-height: 1.7;
+  max-width: 800px; /* Constrain width for readability */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+.social-icons {
+  margin-top: 1.5rem;
+}
+
+.social-icons a {
+  color: var(--light-text-color);
+  font-size: 2rem; /* Larger icons */
+  margin: 0 0.75rem;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--light-accent-color);
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  text-decoration: none;
+}
+
+body.dark-mode .social-icons a {
+  color: var(--dark-text-color);
+}
+
+body.dark-mode .social-icons a:hover {
+  color: var(--dark-accent-color);
+}
+
+/* Font Awesome Icons - ensure they inherit color correctly */
+.fab, .fas, .far, .fal, .fad {
+  /* No specific color rule here, let parent 'a' tag handle it */
+}
+
+/* Skills Section */
+#skills {
+  /* text-align: center; // Optional: if you want section title centered */
+}
+
+.skills-category {
+  margin-bottom: 2.5rem;
+}
+
+.skills-category h3 {
+  font-size: var(--font-size-h3);
+  color: var(--light-primary-color);
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--light-border-color);
+  padding-bottom: 0.5rem;
+}
+
+body.dark-mode .skills-category h3 {
+  color: var(--dark-primary-color);
+  border-bottom-color: var(--dark-border-color);
+}
+
+.dev-icons {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allow icons to wrap */
+  justify-content: center; /* Center icons if they don't fill the row */
+  gap: 1.5rem; /* Spacing between icons */
+}
+
+.dev-icons .list-inline-item {
+  /* margin-right: 1rem; // Replaced by gap */
+  /* margin-bottom: 1rem; // Replaced by gap */
+  text-align: center;
+}
+
+.dev-icons img {
+  max-width: 100%; /* Ensure images are responsive within their container */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 50px; /* Consistent max height for logos */
+  transition: transform 0.3s ease;
+}
+
+.dev-icons img:hover {
+  transform: scale(1.1);
+}
+
+.core-skills-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.core-skills-list li {
+  font-size: var(--font-size-base);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: flex-start; /* Align icon with the start of text line */
+}
+
+.core-skills-list .fa-check-circle {
+  color: var(--light-accent-color);
+  margin-right: 0.75rem;
+  font-size: 1.2em; /* Slightly larger icon */
+  margin-top: 0.15em; /* Align with text better */
+}
+
+body.dark-mode .core-skills-list .fa-check-circle {
+  color: var(--dark-accent-color);
+}
+
+/* Experience Section */
+#experience .card { /* Targets cards specifically within the experience section */
+  margin-bottom: 2rem; /* Space between experience items */
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.experience-header h3 { /* Job Title */
+  color: var(--light-heading-color); /* Use heading color for job title */
+  margin-bottom: 0; /* Remove default margin from card h3 if any */
+  font-size: var(--font-size-h3);
+}
+
+body.dark-mode .experience-header h3 {
+  color: var(--dark-heading-color);
+}
+
+.experience-date {
+  font-size: var(--font-size-sm);
+  color: var(--light-secondary-color);
+  font-weight: 700;
+  white-space: nowrap; /* Prevent date from wrapping */
+  padding-left: 1rem; /* Space from title if they get too close */
+}
+
+body.dark-mode .experience-date {
+  color: var(--dark-secondary-color);
+}
+
+.experience-company {
+  font-size: var(--font-size-base); /* Slightly smaller than job title */
+  font-weight: 700;
+  color: var(--light-accent-color); /* Use accent color for company */
+  margin-bottom: 0.75rem;
+}
+
+body.dark-mode .experience-company {
+  color: var(--dark-accent-color);
+}
+
+.experience-item p:last-child { /* Description */
+  margin-bottom: 0; /* Remove margin from the last paragraph in the card */
+}
+
+@media (max-width: 576px) { /* Adjust breakpoint as needed */
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .experience-date {
+    padding-left: 0;
+    margin-top: 0.25rem;
+  }
+}
+
+/* Certificates Section */
+.certificates-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.certificates-list li {
+  font-size: var(--font-size-base);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center; /* Align icon with text */
+}
+
+.certificates-list .fa-certificate {
+  color: var(--light-accent-color); /* Or a specific color like gold: #FFD700 */
+  margin-right: 0.75rem;
+  font-size: 1.2em; /* Slightly larger icon */
+}
+
+body.dark-mode .certificates-list .fa-certificate {
+  color: var(--dark-accent-color); /* Or a specific color for dark mode */
+}
+
+.certificates-list a {
+  /* Link styling is inherited from global 'a' styles */
+  font-weight: 600; /* Make certificate names slightly bolder */
+}
+
+/* Projects Section */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 2rem; /* Space between cards */
+  margin-bottom: 2rem;
+}
+
+.project-card { /* Extends .card */
+  display: flex; /* Make card a flex container */
+  flex-direction: column; /* Stack content vertically */
+}
+
+.project-link {
+  text-decoration: none; /* Remove underline from link wrapping card */
+  color: inherit; /* Inherit text color */
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Make link fill the card */
+}
+
+.project-link:hover {
+  text-decoration: none; /* No underline on hover for the link wrapping the card */
+}
+
+.project-card .card-body {
+  flex-grow: 1; /* Allow card body to grow and fill space */
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card .card-body h3 {
+  color: var(--light-primary-color); /* Match general card h3 style */
+  font-size: var(--font-size-h3);
+}
+body.dark-mode .project-card .card-body h3 {
+  color: var(--dark-primary-color);
+}
+
+
+.project-image {
+  width: 100%;
+  height: 200px; /* Fixed height for project images */
+  object-fit: cover; /* Cover the area, might crop */
+  border-top-left-radius: 0.5rem; /* Match card border radius */
+  border-top-right-radius: 0.5rem;
+  margin-bottom: 1rem; /* Space between image and text */
+}
+
+.project-subtitle {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--light-secondary-color);
+  margin-bottom: 0.75rem;
+}
+body.dark-mode .project-subtitle {
+  color: var(--dark-secondary-color);
+}
+
+.project-badges {
+  margin-top: auto; /* Push badges to the bottom of the card body */
+  padding-top: 1rem; /* Space above badges */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  font-size: 0.8em; /* Smaller font for badges */
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  background-color: var(--light-secondary-color); /* Default badge color */
+  transition: background-color 0.3s ease;
+}
+
+.badge:hover {
+  background-color: var(--light-accent-color);
+}
+
+body.dark-mode .badge {
+  background-color: var(--dark-secondary-color);
+}
+
+body.dark-mode .badge:hover {
+  background-color: var(--dark-accent-color);
+}
+
+.view-more-projects {
+  text-align: center; /* Center the button */
+  margin-top: 2rem;
+}
+
+.view-more-projects .button i {
+  margin-right: 0.5rem;
+}
+
+/* Awards Section */
+.awards-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.awards-list li {
+  font-size: var(--font-size-base);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center; /* Align icon with text */
+}
+
+.awards-list .fa-trophy {
+  color: #ffc107; /* Gold color for trophies */
+  margin-right: 0.75rem;
+  font-size: 1.2em; /* Slightly larger icon */
+}
+
+/* No specific dark mode for trophy icon color unless desired, gold usually works on dark too */
+
+/*
+------------------------------------
+BLOG STYLES
+------------------------------------
+*/
+
+/* Blog Listing Page (blog.html) */
+#blog-posts-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column for now */
+  gap: 2rem;
+}
+
+.blog-post-preview { /* Extends .card */
+  /* Card styles are mostly inherited */
+}
+
+.blog-post-preview .card-title a {
+  text-decoration: none;
+  color: var(--light-primary-color);
+}
+body.dark-mode .blog-post-preview .card-title a {
+  color: var(--dark-primary-color);
+}
+
+.blog-post-preview .card-title a:hover {
+  text-decoration: underline;
+}
+
+.post-meta {
+  font-size: var(--font-size-sm);
+  color: var(--light-secondary-color);
+  margin-bottom: 1rem;
+}
+body.dark-mode .post-meta {
+  color: var(--dark-secondary-color);
+}
+
+.blog-post-preview .btn.btn-primary { /* Using .button style */
+    display: inline-block;
+    font-family: var(--font-family-heading);
+    font-weight: 700;
+    color: #fff;
+    background-color: var(--light-primary-color);
+    border: 1px solid var(--light-primary-color);
+    padding: 0.5rem 1rem; /* Smaller padding for read more */
+    font-size: var(--font-size-sm);
+    border-radius: 0.3rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    margin-top: 1rem; /* Space above button */
+}
+
+body.dark-mode .blog-post-preview .btn.btn-primary {
+    background-color: var(--dark-primary-color);
+    border-color: var(--dark-primary-color);
+}
+
+.blog-post-preview .btn.btn-primary:hover {
+    background-color: var(--light-accent-color);
+    border-color: var(--light-accent-color);
+    color: #fff;
+    text-decoration: none;
+}
+body.dark-mode .blog-post-preview .btn.btn-primary:hover {
+    background-color: var(--dark-accent-color);
+    border-color: var(--dark-accent-color);
+}
+
+
+/* Individual Blog Post Page (post.html, post1.html, etc.) */
+.blog-post-full article {
+  max-width: 800px; /* Optimal reading width */
+  margin: auto; /* Center the article content */
+}
+
+.blog-post-full .post-title { /* h1 in post.html */
+  font-size: var(--font-size-h1); /* Or a larger specific size like 3rem */
+  color: var(--light-heading-color);
+  margin-bottom: 0.5rem;
+}
+body.dark-mode .blog-post-full .post-title {
+  color: var(--dark-heading-color);
+}
+
+.blog-post-full .post-metadata {
+  font-size: var(--font-size-sm);
+  color: var(--light-secondary-color);
+  margin-bottom: 2rem;
+}
+body.dark-mode .blog-post-full .post-metadata {
+  color: var(--dark-secondary-color);
+}
+
+.blog-post-full .post-content p {
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.blog-post-full .post-content blockquote {
+  border-left: 4px solid var(--light-accent-color);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--light-secondary-color);
+}
+body.dark-mode .blog-post-full .post-content blockquote {
+  border-left-color: var(--dark-accent-color);
+  color: var(--dark-secondary-color);
+}
+
+.blog-post-full .post-content pre {
+  background-color: var(--light-card-bg-color); /* Use card bg for contrast */
+  border: 1px solid var(--light-border-color);
+  padding: 1rem;
+  border-radius: 0.3rem;
+  overflow-x: auto; /* Handle long lines of code */
+  margin-bottom: 1.5rem;
+  font-size: 0.9em; /* Slightly smaller for code */
+}
+body.dark-mode .blog-post-full .post-content pre {
+  background-color: var(--dark-card-bg-color);
+  border-color: var(--dark-border-color);
+}
+
+.blog-post-full .post-content code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  color: var(--light-text-color); /* Ensure code text is readable */
+}
+body.dark-mode .blog-post-full .post-content code {
+  color: var(--dark-text-color);
+}
+
+/* Inline code */
+.blog-post-full .post-content p code,
+.blog-post-full .post-content li code {
+  background-color: rgba(0,0,0,0.05); /* Subtle background for inline code */
+  padding: 0.2em 0.4em;
+  border-radius: 0.2rem;
+  font-size: 0.9em;
+}
+body.dark-mode .blog-post-full .post-content p code,
+body.dark-mode .blog-post-full .post-content li code {
+  background-color: rgba(255,255,255,0.1);
+}
+
+
+.back-to-blog-link {
+  display: inline-block;
+  margin-top: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.back-to-blog-link i {
+  margin-right: 0.5rem;
+}
+
+/* Active Nav Link for Blog */
+/* Add this if you want to highlight the blog link in nav */
+/* You might need a small script to add 'active' class based on current page */
+nav ul li a[href="blog.html"].active-nav-link,
+nav ul li a[data-parent-page="blog"].active-nav-link { /* For individual posts */
+    color: var(--light-nav-hover-color); /* Or a different highlight color */
+    /* text-decoration: underline; */
+}
+body.dark-mode nav ul li a[href="blog.html"].active-nav-link,
+body.dark-mode nav ul li a[data-parent-page="blog"].active-nav-link {
+    color: var(--dark-nav-hover-color);
+}
+
+/* Refinements for Markdown generated content within .blog-post-full .post-content */
+
+/* Headings - Ensure they follow global styles, but can be adjusted if needed */
+.blog-post-full .post-content h1,
+.blog-post-full .post-content h2,
+.blog-post-full .post-content h3,
+.blog-post-full .post-content h4,
+.blog-post-full .post-content h5,
+.blog-post-full .post-content h6 {
+    margin-top: 1.5em; /* More space above headings in post content */
+    margin-bottom: 0.75em;
+    /* Font sizes and colors are inherited from global heading styles */
+}
+
+/* Paragraphs - Inherits global 'p' styles, which are generally fine */
+/* .blog-post-full .post-content p { ... } */
+
+/* Lists */
+.blog-post-full .post-content ul,
+.blog-post-full .post-content ol {
+    margin-bottom: 1.5rem; /* Increased margin for lists */
+    padding-left: 2rem; /* Ensure sufficient indentation */
+}
+.blog-post-full .post-content li {
+    margin-bottom: 0.5rem;
+    line-height: var(--line-height-base); /* Ensure consistent line height */
+}
+.blog-post-full .post-content ul ul,
+.blog-post-full .post-content ol ol,
+.blog-post-full .post-content ul ol,
+.blog-post-full .post-content ol ul {
+  margin-top: 0.5rem; /* Space for nested lists */
+  margin-bottom: 0.5rem;
+}
+
+/* Blockquotes - Already styled, ensure it's within .post-content for specificity if needed */
+/* .blog-post-full .post-content blockquote { ... } */
+
+/* Code Blocks - Already styled, ensure specificity */
+/* .blog-post-full .post-content pre { ... } */
+/* .blog-post-full .post-content code { ... } */
+
+/* Inline Code - Already styled, ensure specificity */
+/* .blog-post-full .post-content p code, */
+/* .blog-post-full .post-content li code { ... } */
+
+/* Links - Inherits global 'a' styles, which are generally fine */
+.blog-post-full .post-content a {
+    /* Example: if you want post links to be more distinct */
+    /* text-decoration: underline; */
+    /* font-weight: 600; */
+}
+.blog-post-full .post-content a:hover {
+    /* text-decoration-thickness: 2px; */
+}
+
+
+/* Horizontal Rules */
+.blog-post-full .post-content hr {
+    border: 0;
+    border-top: 1px solid var(--light-border-color);
+    margin: 2.5rem 0; /* Increased margin for HR */
+}
+body.dark-mode .blog-post-full .post-content hr {
+    border-top-color: var(--dark-border-color);
+}
+
+/* Images */
+.blog-post-full .post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.3rem; /* Optional: consistent rounded corners */
+    margin: 1.5rem 0; /* Increased margin for images */
+    display: block; /* Prevents inline alignment issues */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Subtle shadow for images */
+}
+body.dark-mode .blog-post-full .post-content img {
+    box-shadow: 0 2px 8px rgba(255,255,255,0.05);
+}
+
+
+/* Theme Toggler Button in Nav */
+.theme-toggler-button {
+  background: none;
+  border: 1px solid var(--light-nav-text-color); /* Use nav text color for border */
+  color: var(--light-nav-text-color); /* Use nav text color for icon */
+  padding: 0.5rem 0.8rem; /* Adjust padding */
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-size: 1rem; /* Adjust icon size if needed */
+  margin-left: 1rem; /* Space from nav links */
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.theme-toggler-button:hover {
+  color: var(--light-nav-hover-color);
+  border-color: var(--light-nav-hover-color);
+}
+
+body.dark-mode .theme-toggler-button {
+  border-color: var(--dark-nav-text-color);
+  color: var(--dark-nav-text-color);
+}
+
+body.dark-mode .theme-toggler-button:hover {
+  color: var(--dark-nav-hover-color);
+  border-color: var(--dark-nav-hover-color);
+}
+
+/* Adjustments for mobile view if needed */
+@media (max-width: 768px) {
+  .theme-toggler-button {
+    margin-left: 0; /* Remove left margin */
+    margin-right: 0.5rem; /* Add some right margin if menu toggle is on the left */
+    /* Or position it differently, e.g., next to the hamburger */
+  }
+  /* If hamburger is on the right, ensure toggler is not pushed out or looks odd */
+  nav {
+    /* Example: ensure space if toggler is next to hamburger */
+    /* padding-right: 0.5rem;  You might need to adjust based on your exact layout */
+  }
+}
+
+
+/* Education Section */
+#education .card { /* Targets cards specifically within the education section */
+  margin-bottom: 2rem; /* Space between education items */
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.education-header h3 { /* Institution Name */
+  color: var(--light-heading-color);
+  margin-bottom: 0;
+  font-size: var(--font-size-h3);
+}
+
+body.dark-mode .education-header h3 {
+  color: var(--dark-heading-color);
+}
+
+.education-date {
+  font-size: var(--font-size-sm);
+  color: var(--light-secondary-color);
+  font-weight: 700;
+  white-space: nowrap;
+  padding-left: 1rem;
+}
+
+body.dark-mode .education-date {
+  color: var(--dark-secondary-color);
+}
+
+.education-degree {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--light-accent-color);
+  margin-bottom: 0.5rem; /* Adjusted margin */
+}
+
+body.dark-mode .education-degree {
+  color: var(--dark-accent-color);
+}
+
+.education-item p:last-child { /* Description or last detail */
+  margin-bottom: 0;
+}
+
+@media (max-width: 576px) { /* Adjust breakpoint as needed */
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .education-date {
+    padding-left: 0;
+    margin-top: 0.25rem;
+  }
+}

@@ -14,541 +14,294 @@
   <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
   <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
   <!-- Custom styles for this template -->
-  <link href="static/css/resume.css" rel="stylesheet">
+  <link href="static/css/modern-style.css" rel="stylesheet">
   <link rel="shortcut icon" href="static/img/K_Logo.png" type="image/x-icon">
   <style>
     /* Add your custom styles here */
   </style>
 </head>
 
-<body id="page-top">
-
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
-      <span class="d-block d-lg-none text-white subheading">Karthik Kaiplody</span>
-      <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="static/img/Photo-Github.jpg" alt="">
-      </span>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#education">Education</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#certificates">Certificates</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
-        </li> 
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#awards">ACHIEVEMENTS &amp; ACCOLADES</a>
-        </li>
+<body id="page-top"> <!-- Add class="dark-mode" here to test dark mode -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">My Portfolio</a>
+      <div class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+      <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#awards">Awards</a></li>
+          <li><a href="blog.html">Blog</a></li>
       </ul>
-    </div>
-  </nav>
+      <button id="theme-toggler" class="theme-toggler-button" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+      </button>
+    </nav>
+  </header>
 
-  <div class="container-fluid p-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
-            <div class="w-100">
-        <h1 class="mb-0">Karthik
-          <span class="text-primary">Kaiplody</span>
-        </h1>
-        <div class="subheading mb-5">
-          Chicago, USA·
-          <!-- (9611) ASK-4-IT! · -->
-          <a href="mailto:karthik.kaiplody@gmail.com">karthik.kaiplody@gmail.com</a>
-        </div>
-        <p class="lead mb-5"><p><b>Graduate Student in Data science at Illinois Institute of Technology.</b> Worked as a Machine Learning Engineer skilled in Natural Language Processing (NLP) and Computer Vision (CV) with 5-years of experience. I enjoy building AI products by leveraging state-of-the-art machine learning architectures. I'm addicted to learning and growing everyday. I love math, programming and datascience. My Research interests are text similarity, information retrieval, and conversational AI.</p>
-</p>
+  <main>
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <img src="static/img/Photo-Github.jpg" alt="Karthik Kaiplody" class="profile-image">
+        <h1>Karthik <span class="text-primary">Kaiplody</span></h1>
+        <p class="subheading">Chicago, USA · <a href="mailto:karthik.kaiplody@gmail.com">karthik.kaiplody@gmail.com</a></p>
+        <p class="lead"><b>Graduate Student in Data science at Illinois Institute of Technology.</b> Worked as a Machine Learning Engineer skilled in Natural Language Processing (NLP) and Computer Vision (CV) with 5-years of experience. I enjoy building AI products by leveraging state-of-the-art machine learning architectures. I'm addicted to learning and growing everyday. I love math, programming and datascience. My Research interests are text similarity, information retrieval, and conversational AI.</p>
         <div class="social-icons">
-        
-        <br></br>
-          
-          <a href="https://github.com/KarthikKaiplody/" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-          
-          <a href="https://twitter.com/KarthikKaiplody/" target="_blank">
-            <i class="fab fa-twitter"></i>
-          </a>
-          
-          <a href="https://www.linkedin.com/in/karthikkaiplody/" target="_blank">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          
-        
-<!--           
-          <a href="" target="_blank">
-            <i class="fab fa-dev"></i>
-          </a> -->
-          
-          <!-- <a href="https://medium.com/@" target="_blank">
-            <i class="fab fa-medium"></i>
-          </a> -->
-          
+          <a href="https://github.com/KarthikKaiplody/" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://twitter.com/KarthikKaiplody/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/karthikkaiplody/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
     </section>
 
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
-      <div class="w-100">
-        <h2 class="mb-5">Skills</h2>
-
-        <div class="subheading mb-3">Programming Languages &amp; Tools & Libraries</div>
-        <ul class="list-inline dev-icons">
-          
-          <!-- <li class="list-inline-item">
-            <i class="fab fa-python"></i>
-          </li>
-          
-          <li class="list-inline-item">
-            <i class="fab fa-markdown"></i>
-          </li>
-          
-          <li class="list-inline-item">
-            <i class="fab fa-git-alt"></i>
-          </li>
-          
-          <li class="list-inline-item">
-            <i class="fab fa-github"></i>
-          </li>
-          
-          <li class="list-inline-item">
-            <i class="fab fa-docker"></i>
-          </li>
-          
-          <li class="list-inline-item">
-            <i class="fab fa-digital-ocean"></i>
-          </li>
-          
-          <li class="list-inline-item">
-            <i class="fab fa-google"></i>
-          </li>
-          
-          <li class="list-inline-item">
-            <i class="fab fa-google-drive"></i>
-          </li>
-          
-          <li class="list-inline-item">
-            <i class="fab fa-slack"></i>
-          </li>
-          
-          <li class="list-inline-item">
-            <i class="fab fa-trello"></i>
-          </li> -->
-          
-          <!-- <li class="list-inline-item">
-            <i class="fab fa-apple"></i>
-          </li>
-          
-          <li class="list-inline-item">
-            <i class="fab fa-linux"></i>
-          </li> -->
-          
-           
-          <li class="list-inline-item">
-            <i class="fab"><img height="50" src="https://www.vectorlogo.zone/logos/python/python-ar21.svg"></i>
-          </li> 
-          
-          <li class="list-inline-item">
-            <i class="fab"><img height="40" src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg"></i>
-          </li>
-
-          <li class="list-inline-item">
-            <i class="fab"><img height="30" src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Keras_logo.svg"></i>
-          </li>
-          
-          <li class="list-inline-item">
-            <i class="fab"><img height="50" src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-ar21.svg"></i>
-          </li> 
-
-          <li class="list-inline-item">
-            <i class="fab"><img height="50" src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg"></i>
-          </li> 
-          <li class="list-inline-item">
-            <i class="fab"><img height="50" src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg"></i>
-          </li> 
-          <li class="list-inline-item">
-            <i class="fab"><img height="50" src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab"><img height="30" src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Rasa_nlu_horizontal_purple.svg"></i>
-          </li>
-          
-          
-          <li class="list-inline-item">
-            <i class="fab"><img height="50" src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-ar21.svg"></i>
-          </li> 
-          <li class="list-inline-item">
-            <i class="fab"><img height="30" src="https://upload.wikimedia.org/wikipedia/commons/8/88/SpaCy_logo.svg"></i>
-          </li>
-<!--           
-          <li class="list-inline-item">
-            <i class="fab"><img height="30" src=""></i>
-          </li> -->
-          
-          
-          <li class="list-inline-item">
-            <i class="fab"><img height="50" src="https://www.vectorlogo.zone/logos/linux/linux-ar21.svg"></i>
-          </li> 
-          <li class="list-inline-item">
-            <i class="fab"><img height="30" src="https://www.vectorlogo.zone/logos/mysql/mysql-horizontal.svg"></i>
-          </li> 
-          <li class="list-inline-item">
-            <i class="fab"><img height="30"src="https://www.vectorlogo.zone/logos/postgresql/postgresql-horizontal.svg"></i>
-          </li> 
-          <li class="list-inline-item">
-            <i class="fab"><img height="30" src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-ar21.svg"></i>
-          </li> 
-          <li class="list-inline-item">
-            <i class="fab"><img height="50" src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-ar21.svg"></i>
-          </li> 
-          <li class="list-inline-item">
-            <i class="fab"><img height="50" src="https://www.vectorlogo.zone/logos/digitalocean/digitalocean-ar21.svg"></i>
-          </li> 
-         
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>My Skills</h2>
+      
+      <div class="skills-category">
+        <h3>Programming Languages, Tools & Libraries</h3>
+        <ul class="dev-icons">
+          <li class="list-inline-item" title="Python"><img height="50" src="https://www.vectorlogo.zone/logos/python/python-ar21.svg" alt="Python"></li>
+          <li class="list-inline-item" title="scikit-learn"><img height="40" src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit-learn"></li>
+          <li class="list-inline-item" title="Keras"><img height="30" src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Keras_logo.svg" alt="Keras"></li>
+          <li class="list-inline-item" title="TensorFlow"><img height="50" src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-ar21.svg" alt="TensorFlow"></li>
+          <li class="list-inline-item" title="PyTorch"><img height="50" src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg" alt="PyTorch"></li>
+          <li class="list-inline-item" title="NumPy"><img height="50" src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" alt="NumPy"></li>
+          <li class="list-inline-item" title="Pandas"><img height="50" src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg" alt="Pandas"></li>
+          <li class="list-inline-item" title="Rasa"><img height="30" src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Rasa_nlu_horizontal_purple.svg" alt="Rasa"></li>
+          <li class="list-inline-item" title="AWS"><img height="50" src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-ar21.svg" alt="AWS"></li>
+          <li class="list-inline-item" title="spaCy"><img height="30" src="https://upload.wikimedia.org/wikipedia/commons/8/88/SpaCy_logo.svg" alt="spaCy"></li>
+          <li class="list-inline-item" title="Linux"><img height="50" src="https://www.vectorlogo.zone/logos/linux/linux-ar21.svg" alt="Linux"></li>
+          <li class="list-inline-item" title="MySQL"><img height="30" src="https://www.vectorlogo.zone/logos/mysql/mysql-horizontal.svg" alt="MySQL"></li>
+          <li class="list-inline-item" title="PostgreSQL"><img height="30" src="https://www.vectorlogo.zone/logos/postgresql/postgresql-horizontal.svg" alt="PostgreSQL"></li>
+          <li class="list-inline-item" title="Django"><img height="30" src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-ar21.svg" alt="Django"></li>
+          <li class="list-inline-item" title="Flask"><img height="50" src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-ar21.svg" alt="Flask"></li>
+          <li class="list-inline-item" title="DigitalOcean"><img height="50" src="https://www.vectorlogo.zone/logos/digitalocean/digitalocean-ar21.svg" alt="DigitalOcean"></li>
         </ul>
-         
-        <div class="subheading mb-3">Core Skills</div>
-        <ul class="fa-ul mb-0">
-            <!-- <i class="fa-li fa fa-check"></i> -->
-            <!-- APIs and web development, MongoDB</li> -->
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Data pipeline development and deployment
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Object Oriented Programming ( Oops) 
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Development of AI tools using Natural Language Processing (NLP), Natural Language Understanding (NLU)</li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Machine Learning and State of the Art Deep learning Techniques</li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            API creation and Integration</li>
-          
-          <!-- <li>
-            <i class="fa-li fa fa-check"></i>
-            Web scraping and web automation</li>
-          <li>   -->
+      </div>
+
+      <div class="skills-category">
+        <h3>Core Skills</h3>
+        <ul class="core-skills-list">
+          <li><i class="fas fa-check-circle"></i> Data pipeline development and deployment</li>
+          <li><i class="fas fa-check-circle"></i> Object Oriented Programming (OOP)</li>
+          <li><i class="fas fa-check-circle"></i> Development of AI tools using Natural Language Processing (NLP), Natural Language Understanding (NLU)</li>
+          <li><i class="fas fa-check-circle"></i> Machine Learning and State of the Art Deep learning Techniques</li>
+          <li><i class="fas fa-check-circle"></i> API creation and Integration</li>
         </ul>
       </div>
     </section>
 
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
-      <div class="w-100">
-        <h2 class="mb-5">Experience</h2>
-
-
-          <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Data Science Engineer Intern</h3>
-            <div class="subheading mb-3">CCC Intelligent Solutions, Chicago</div>
-            <p> Designed and built a CI/CD pipeline for AI products. Worked on AWS migration of machine learning models and packages.
-</p>
-            
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">May 2023 - Present</span>
-          </div>
+    <!-- Experience Section -->
+    <section id="experience">
+      <h2>Work Experience</h2>
+      <div class="experience-item card">
+        <div class="experience-header">
+          <h3>Data Science Engineer Intern</h3>
+          <span class="experience-date">May 2023 - Present</span>
         </div>
-        
-          <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Research Assistant</h3>
-            <div class="subheading mb-3">Scalable Computing Software Lab</div>
-            <p>Creating onboarding tool for the nutritional data. Worked on designing the end to end machine learning pipeline.
-</p>
-            
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">Feb 2023 - May 2023</span>
-          </div>
+        <p class="experience-company">CCC Intelligent Solutions, Chicago</p>
+        <p>Designed and built a CI/CD pipeline for AI products. Worked on AWS migration of machine learning models and packages.</p>
+      </div>
+      <div class="experience-item card">
+        <div class="experience-header">
+          <h3>Research Assistant</h3>
+          <span class="experience-date">Feb 2023 - May 2023</span>
         </div>
-        
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Machine Learning Engineer - III</h3>
-            <div class="subheading mb-3">Acuity Knowledge Partners Ltd</div>
-            <p>AI& ML practitioner. Contributing with NLP tasks for company&#39;s product.
-</p>
-            
-            <!-- <p><a href="">Reference link.</a></p>
-             -->
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">August 2021 - August 2022</span>
-          </div>
+        <p class="experience-company">Scalable Computing Software Lab</p>
+        <p>Creating onboarding tool for the nutritional data. Worked on designing the end to end machine learning pipeline.</p>
+      </div>
+      <div class="experience-item card">
+        <div class="experience-header">
+          <h3>Machine Learning Engineer - III</h3>
+          <span class="experience-date">August 2021 - August 2022</span>
         </div>
-        
-        
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Senior Engineer, ER&D</h3>
-            <div class="subheading mb-3">Mindtree Ltd</div>
-            <p>AI& ML practitioner. Contributing with NLP tasks for company&#39;s product.
-</p>
-            
-            <!-- <p><a href="">Reference link.</a></p>
-             -->
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">February 2020 - August 2021</span>
-          </div>
+        <p class="experience-company">Acuity Knowledge Partners Ltd</p>
+        <p>AI & ML practitioner. Contributing with NLP tasks for company's product.</p>
+      </div>
+      <div class="experience-item card">
+        <div class="experience-header">
+          <h3>Senior Engineer, ER&D</h3>
+          <span class="experience-date">February 2020 - August 2021</span>
         </div>
-        
-        
-        
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Engineer, ER&D</h3>
-            <div class="subheading mb-3">Mindtree Ltd</div>
-            <p>Contributed towards automating and building AI tools for clients and thus increasing the productivity.
-</p>
-            
-            <!-- <p><a href="">Reference link.</a></p> -->
-            
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">August 2017 - January 2020</span>
-          </div>
+        <p class="experience-company">Mindtree Ltd</p>
+        <p>AI & ML practitioner. Contributing with NLP tasks for company's product.</p>
+      </div>
+      <div class="experience-item card">
+        <div class="experience-header">
+          <h3>Engineer, ER&D</h3>
+          <span class="experience-date">August 2017 - January 2020</span>
         </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
-       <div class="w-100">
-        <h2 class="mb-5">Education</h2>
-       
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Illinois Institute of Technology, Chicago</h3>
-            <div class="subheading mb-3">Masters in Data Science</div>
-            <div></div>
-            <p></p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">Fall 2022 - Fall 2024(expected)</span>
-          </div>
-        </div>
-        
-        
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">International Institute of Information Technology (IIIT), Bangalore</h3>
-            <div class="subheading mb-3">PGD-Machine learning and AI</div>
-            <div></div>
-            <p></p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">2020-2021</span>
-          </div>
-        </div>
-        
-        
-        
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">GM Institue of Technology - Visvesvaraya Technological University, Davangere</h3>
-            <div class="subheading mb-3">Bachelor of Engineering in Electronics and Communication</div>
-            <div></div>
-            <p></p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">2012-2016</span>
-          </div>
-        </div>
-        
-        
-        
-        <!-- <p>For a detailed reference about this section, please visit <a href="" target="_blank">this link</a>.</p> -->
-        
-        
+        <p class="experience-company">Mindtree Ltd</p>
+        <p>Contributed towards automating and building AI tools for clients and thus increasing the productivity.</p>
       </div>
     </section>
 
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="certificates">
-      <div class="w-100">
-        <h2 class="mb-5">Certificates</h2>
-        <ul class="fa-ul mb-0">
-          <li>
-            <i class="fa-li fa fa-certificate"></i>
-            <a href="https://www.coursera.org/account/accomplishments/certificate/TMHFP973WDZ8"> Creating Multi Task Models With Keras(Coursera)</a> 
-          <li>
-            <i class="fa-li fa fa-certificate"></i>
-            <a href="https://www.coursera.org/account/accomplishments/certificate/RWXEYRHFT66J"> AWS S3 Basics(Coursera)</a> 
-          <li>
-            <i class="fa-li fa fa-certificate"></i>
-            <a href="https://www.coursera.org/account/accomplishments/certificate/PGAU36YNH8A8">Fine Tune BERT for Text Classification with TensorFlow (Coursera)</a> 
-          <li>
-            <i class="fa-li fa fa-certificate"></i>
-            <a href="https://www.coursera.org/account/accomplishments/certificate/8HBQ4E83Y885">Transfer Learning for NLP with TensorFlow Hub (Coursera)</a> 
-          <li>
-            <i class="fa-li fa fa-certificate"></i>
-            <a href="https://coursera.org/share/9dacb04a7462bedfce28c440a9e61e9b"> Using Databases with Python ( Coursera )</a>  
-          <li>
-            <i class="fa-li fa fa-certificate"></i>
-            <a href="https://coursera.org/share/ae521ed28606b5bf72441e25f0d8a642">Introduction to Data Science in Python ( Coursera )</a>
-          <li>
-            <i class="fa-li fa fa-certificate"></i>        
-            <a href="https://coursera.org/share/e1729cd5aeaa2b83625085910c49bb72">Data structures ( Coursera )</a> 
-          <li>
-            <i class="fa-li fa fa-certificate"></i>        
-            <a href="https://www.udemy.com/certificate/UC-TWPWUTTP/">Django 2.2 &amp; Python | The Ultimate Web Development Bootcamp  ( Udemy )</a>     
-          <li>
-            <i class="fa-li fa fa-certificate"></i>        
-            <a href="https://www.udemy.com/certificate/UC-BDQFC0GH/"> Build a Python REST API with the Django Rest Framework ( Udemy )</a>   
-        </ul>
+    <!-- Education Section -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="education-item card">
+        <div class="education-header">
+          <h3>Illinois Institute of Technology, Chicago</h3>
+          <span class="education-date">Fall 2022 - Fall 2024 (expected)</span>
+        </div>
+        <p class="education-degree">Masters in Data Science</p>
+        <!-- <p>Relevant coursework or details can go here if any.</p> -->
+      </div>
+      <div class="education-item card">
+        <div class="education-header">
+          <h3>International Institute of Information Technology (IIIT), Bangalore</h3>
+          <span class="education-date">2020 - 2021</span>
+        </div>
+        <p class="education-degree">PGD-Machine learning and AI</p>
+      </div>
+      <div class="education-item card">
+        <div class="education-header">
+          <h3>GM Institute of Technology - Visvesvaraya Technological University, Davangere</h3>
+          <span class="education-date">2012 - 2016</span>
+        </div>
+        <p class="education-degree">Bachelor of Engineering in Electronics and Communication</p>
+      </div>
     </section>
 
-    <hr class="m-0">
+    <!-- Certificates Section -->
+    <section id="certificates">
+      <h2>Certificates</h2>
+      <ul class="certificates-list">
+        <li><i class="fas fa-certificate"></i> <a href="https://www.coursera.org/account/accomplishments/certificate/TMHFP973WDZ8" target="_blank" rel="noopener noreferrer">Creating Multi Task Models With Keras (Coursera)</a></li>
+        <li><i class="fas fa-certificate"></i> <a href="https://www.coursera.org/account/accomplishments/certificate/RWXEYRHFT66J" target="_blank" rel="noopener noreferrer">AWS S3 Basics (Coursera)</a></li>
+        <li><i class="fas fa-certificate"></i> <a href="https://www.coursera.org/account/accomplishments/certificate/PGAU36YNH8A8" target="_blank" rel="noopener noreferrer">Fine Tune BERT for Text Classification with TensorFlow (Coursera)</a></li>
+        <li><i class="fas fa-certificate"></i> <a href="https://www.coursera.org/account/accomplishments/certificate/8HBQ4E83Y885" target="_blank" rel="noopener noreferrer">Transfer Learning for NLP with TensorFlow Hub (Coursera)</a></li>
+        <li><i class="fas fa-certificate"></i> <a href="https://coursera.org/share/9dacb04a7462bedfce28c440a9e61e9b" target="_blank" rel="noopener noreferrer">Using Databases with Python (Coursera)</a></li>
+        <li><i class="fas fa-certificate"></i> <a href="https://coursera.org/share/ae521ed28606b5bf72441e25f0d8a642" target="_blank" rel="noopener noreferrer">Introduction to Data Science in Python (Coursera)</a></li>
+        <li><i class="fas fa-certificate"></i> <a href="https://coursera.org/share/e1729cd5aeaa2b83625085910c49bb72" target="_blank" rel="noopener noreferrer">Data structures (Coursera)</a></li>
+        <li><i class="fas fa-certificate"></i> <a href="https://www.udemy.com/certificate/UC-TWPWUTTP/" target="_blank" rel="noopener noreferrer">Django 2.2 & Python | The Ultimate Web Development Bootcamp (Udemy)</a></li>
+        <li><i class="fas fa-certificate"></i> <a href="https://www.udemy.com/certificate/UC-BDQFC0GH/" target="_blank" rel="noopener noreferrer">Build a Python REST API with the Django Rest Framework (Udemy)</a></li>
+      </ul>
+    </section>
 
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="projects">
-        <div class="w-100">
-        <h2 class="mb-5">Projects</h2>
-        <!-- <p> This section contains awesome projects that I've worked on</p> -->
-        <!-- Begins card -->
-        <div class="row">
-          <div class="col-md-4 mb-5">
-            <div class="card h-100">
-              <a href="https://github.com/KarthikKaiplody/ML_Apps/tree/master/Bank_Note_Authentication_App"><img src="static/img/API_screenshot.png" class="card-img-top" alt="project-name">
-              <div class="card-body">
-                <h3 class="card-title">Machine Learning API</h3>
-                <h5 class="card-title">Flask API For Bank Note Authentication Prediction</h5>
-                <p class="card-text">The objective of the projet is to identify wether the given bank not with the selected features are authentic or not. A binary classfication problem.</p>
-                <p>
-                  <span class="badge badge-pill badge-secondary">Flask</span>
-                  <span class="badge badge-pill badge-secondary">Python</span>
-                  <span class="badge badge-pill badge-secondary">sklearn</span>
-                  <span class="badge badge-pill badge-secondary">Random-Forest classifier</span>
-                  <span class="badge badge-pill badge-secondary">Binary Classfication</span>
-                </p>
-              </a>
-              </div>
-              <!-- <div class="card-footer">
-                
-                <a href="https://github.com/KarthikKaiplody/ML_Apps/tree/master/Bank_Note_Authentication_App" class="text-dark" target="_blank">
-                  <i class="fab fa-github-square fa-2x"></i>
-                </a>
-                
-                <a href="https://github.com/KarthikKaiplody/ML_Apps/tree/master/Bank_Note_Authentication_App" class="btn btn-dark float-right" target="_blank">View project</a>
-              </div> -->
-            </div>
-          </div>
-          <div class="col-md-4 mb-5">
-            <div class="card h-100">
-              <a href="https://github.com/karthikkaiplody/MLFlow-Prod"><img src="static/img/MLFlow_Dashboard.png" class="card-img-top" alt="project-name">
-              <div class="card-body">
-              <h3 class="card-title">MLFlow pipeline</h3>
-              <h5 class="card-title">Tracking and Serving the ML models using MLFlow</h5>
-              <p class="card-text"></p>
-               <p>
-                 <span class="badge badge-pill badge-secondary">MLFlow</span>
-                 <span class="badge badge-pill badge-secondary">Python</span>
-                 <span class="badge badge-pill badge-secondary">sklearn</span>
-                 <span class="badge badge-pill badge-secondary">ElasticNet Model</span>
-                 <span class="badge badge-pill badge-secondary">Regression</span>
-               </p>
-              </a>
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>My Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card card">
+          <a href="https://github.com/KarthikKaiplody/ML_Apps/tree/master/Bank_Note_Authentication_App" target="_blank" rel="noopener noreferrer" class="project-link">
+            <img src="static/img/API_screenshot.png" class="project-image" alt="Machine Learning API Screenshot">
+            <div class="card-body">
+              <h3>Machine Learning API</h3>
+              <p class="project-subtitle">Flask API For Bank Note Authentication Prediction</p>
+              <p>The objective of the project is to identify whether the given bank note with the selected features are authentic or not. A binary classification problem.</p>
+              <div class="project-badges">
+                <span class="badge">Flask</span>
+                <span class="badge">Python</span>
+                <span class="badge">sklearn</span>
+                <span class="badge">Random-Forest</span>
+                <span class="badge">Classification</span>
               </div>
             </div>
-          </div>
-  
-              
-                  
-          <!-- <div class="col-md-4 mb-5">
-            <div class="card h-100">
-              <img src="" class="card-img-top" alt="project-name1">
-              <div class="card-body">
-                <h3 class="card-title">project-name1</h3>
-                <h5 class="card-title">Deep Learning Project</h5>
-                <p class="card-text">description</p>
-                <p>
-                  
-                  <span class="badge badge-pill badge-secondary">Python</span>
-                  
-                  <span class="badge badge-pill badge-secondary">Tensorflow 2.0</span>
-                  
-                  <span class="badge badge-pill badge-secondary">Keras</span>
-                  
-                  <span class="badge badge-pill badge-secondary">Deep Learning</span>
-                  
-                </p>
-              </div>
-              <div class="card-footer">
-                
-                <a href="" class="text-dark" target="_blank">
-                  <i class="fab fa-github-square fa-2x"></i>
-                </a>
-                
-                <a href="" class="btn btn-dark float-right" target="_blank">View project</a>
+          </a>
+        </div>
+        <div class="project-card card">
+          <a href="https://github.com/karthikkaiplody/MLFlow-Prod" target="_blank" rel="noopener noreferrer" class="project-link">
+            <img src="static/img/MLFlow_Dashboard.png" class="project-image" alt="MLFlow Pipeline Screenshot">
+            <div class="card-body">
+              <h3>MLFlow pipeline</h3>
+              <p class="project-subtitle">Tracking and Serving ML models using MLFlow</p>
+              <p>This project demonstrates setting up an MLFlow pipeline for tracking experiments and serving machine learning models effectively.</p>
+              <div class="project-badges">
+                <span class="badge">MLFlow</span>
+                <span class="badge">Python</span>
+                <span class="badge">sklearn</span>
+                <span class="badge">ElasticNet</span>
+                <span class="badge">Regression</span>
               </div>
             </div>
-          </div> -->
-          
-          <a href="https://github.com/karthikkaiplody" class="text-dark" target="_blank" >
-            <i class="fab fa-github-square fa-2x " style="font-size: 70px;"></i>
           </a>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="awards">
-       <div class="w-100">
-        <h2 class="mb-5">ACHIEVEMENTS &amp; ACCOLADES</h2>
-        <ul class="fa-ul mb-0">
-          
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Finished top 29% of the leader board, Kaggle Competition, TPS - Jan 2021</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Got 110th rank out of 3363 people who participated, Hacker Earth Deep Learning Challenge</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Awarded as <b>"Project of the Year-2016" from KSCST & IISc, Bangalore</b> for my project Real-time Wireless Electrocardiogram and Its signal Display</li>  
-
-          
-        </ul>
+        </div>
+        <!-- Add more project cards here if needed -->
+      </div>
+      <div class="view-more-projects">
+        <a href="https://github.com/karthikkaiplody" class="button" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View More on GitHub</a>
       </div>
     </section>
 
-    <div class="container">
-      <p class="small float-right">Built with <i class="fas fa-heart text-danger"></i> by <a href="#" target="_blank">Karthik Kaiplody</a>, under a MIT License.</p>
-    </div>
-  </div>
+    <!-- Awards Section -->
+    <section id="awards">
+      <h2>Achievements & Accolades</h2>
+      <ul class="awards-list">
+        <li><i class="fas fa-trophy"></i> Finished top 29% of the leader board, Kaggle Competition, TPS - Jan 2021</li>
+        <li><i class="fas fa-trophy"></i> Got 110th rank out of 3363 people who participated, Hacker Earth Deep Learning Challenge</li>
+        <li><i class="fas fa-trophy"></i> Awarded as <b>"Project of the Year-2016" from KSCST & IISc, Bangalore</b> for my project Real-time Wireless Electrocardiogram and Its signal Display</li>
+      </ul>
+    </section>
+
+    <!-- Blog Placeholder Section (can be removed or repurposed if blog has its own page) -->
+    <!-- <section id="blog"> -->
+      <!-- Blog placeholder content will go here -->
+    <!-- </section> -->
+
+    <!-- Contact Section (Optional, can be part of About or Footer) -->
+    <!-- <section id="contact"> -->
+      <!-- Contact content will go here -->
+    <!-- </section> -->
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Karthik Kaiplody. All rights reserved.</p>
+    <p>Built with <i class="fas fa-heart text-danger"></i> by Karthik Kaiplody, under a MIT License.</p>
+    <!-- Old theme switcher removed from footer -->
+  </footer>
 
   <!-- Bootstrap core JavaScript -->
   <script src="static/vendor/jquery/jquery.min.js"></script>
   <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- Plugin JavaScript -->
   <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
-  <!-- Custom scripts for this template -->
-  <script src="static/js/resume.min.js"></script>
+  <!-- Custom scripts for this template (original resume.js may not be fully needed) -->
+  <!-- <script src="static/js/resume.min.js"></script> -->
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('mobile-menu');
+    const navList = document.querySelector('.nav-list');
+    if (menuToggle && navList) { // Check if elements exist
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+            const isExpanded = navList.classList.contains('active');
+            menuToggle.setAttribute('aria-expanded', isExpanded);
+        });
+    }
 
+    // REMOVED old theme switcher logic from here
+
+    // Optional: Apply saved theme on page load (handled by theme-switcher.js now)
+    document.addEventListener('DOMContentLoaded', () => {
+        // Smooth scroll for anchor links (optional, if not using jQuery easing)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
+  </script>
+  <script src="static/js/theme-switcher.js"></script>
 </body>
 
 </html>

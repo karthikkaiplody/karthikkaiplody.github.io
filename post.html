@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title> <!-- This will be updated by JS -->
+    <link rel="stylesheet" href="static/css/modern-style.css">
+    <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"> <!-- FontAwesome -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body class="blog-post-full"> <!-- Class for specific post styling -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">My Portfolio</a>
+            <div class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <button id="theme-toggler" class="theme-toggler-button" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <article> <!-- This outer article tag is for overall post structure -->
+            <h1 class="post-title">Loading Post...</h1> <!-- Title will be updated by JS -->
+            <p class="post-metadata">Published on: <time datetime="YYYY-MM-DD">Date TBD</time> by Karthik Kaiplody</p> <!-- Metadata can be updated if available in MD frontmatter later -->
+            
+            <div id="markdown-content" class="post-content">
+                <!-- Markdown content will be rendered here -->
+                <p>Loading content...</p>
+            </div>
+
+            <a href="blog.html" class="back-to-blog-link"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2023 Karthik Kaiplody. All rights reserved.</p>
+        <p>Built with <i class="fas fa-heart text-danger"></i> by Karthik Kaiplody, under a MIT License.</p>
+        <!-- Theme switcher button is now in the nav -->
+    </footer>
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
+        if (menuToggle && navList) {
+            menuToggle.addEventListener('click', () => {
+                navList.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+                const isExpanded = navList.classList.contains('active');
+                menuToggle.setAttribute('aria-expanded', isExpanded);
+            });
+        }
+
+        // Active Nav Link for Blog page
+        document.addEventListener('DOMContentLoaded', () => {
+            const blogNavLinks = document.querySelectorAll('nav ul li a[href="blog.html"]');
+            blogNavLinks.forEach(link => {
+                // Highlight if on blog.html or any page that looks like a post page (e.g. contains "post" in path)
+                if (window.location.pathname.endsWith('blog.html') || window.location.pathname.includes('post')) {
+                    link.classList.add('active-nav-link');
+                }
+            });
+        });
+    </script>
+    <script src="static/js/theme-switcher.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const markdownContentElement = document.getElementById('markdown-content');
+        const postTitleElement = document.querySelector('.post-title'); 
+        const pageTitleElement = document.querySelector('title');
+        // Placeholder for actual date element if we want to update it from MD
+        // const postDateElement = document.querySelector('.post-metadata time'); 
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const mdFilename = urlParams.get('md');
+
+        if (!mdFilename) {
+            if(markdownContentElement) markdownContentElement.innerHTML = '<p>Error: No blog post specified. Please provide a ?md=filename parameter.</p>';
+            if(postTitleElement) postTitleElement.textContent = 'Error';
+            if(pageTitleElement) pageTitleElement.textContent = 'Error - My Portfolio';
+            return;
+        }
+
+        fetch(`/posts/\${mdFilename}.md`) 
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Network response was not ok. Status: \${response.status}`);
+                }
+                return response.text();
+            })
+            .then(markdownText => {
+                if(markdownContentElement) {
+                    markdownContentElement.innerHTML = marked.parse(markdownText);
+                }
+
+                const match = markdownText.match(/^#\s+(.*)/m);
+                let titleFromMarkdown = mdFilename.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()); // Default title
+                if (match && match[1]) {
+                    titleFromMarkdown = match[1];
+                }
+                
+                if(postTitleElement) postTitleElement.textContent = titleFromMarkdown;
+                if(pageTitleElement) pageTitleElement.textContent = titleFromMarkdown + " - My Portfolio";
+
+                // Future enhancement: Extract date from frontmatter if available
+                // For now, the date in post.html is static or can be manually updated when creating the link.
+            })
+            .catch(error => {
+                console.error('Error fetching or parsing markdown:', error);
+                if(markdownContentElement) markdownContentElement.innerHTML = `<p>Error loading post "<strong>\${mdFilename}</strong>". It might not exist at <code>/posts/\${mdFilename}.md</code> or there was a network issue.</p>`;
+                if(postTitleElement) postTitleElement.textContent = 'Error Loading Post';
+                if(pageTitleElement) pageTitleElement.textContent = 'Error Loading Post - My Portfolio';
+            });
+    });
+    </script>
+</body>
+</html>

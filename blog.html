@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="static/css/modern-style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">My Portfolio</a>
+            <div class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <button id="theme-toggler" class="theme-toggler-button" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <h1>My Blog</h1>
+        <div id="blog-posts-container">
+            <div class="card blog-post-preview">
+              <div class="card-body">
+                <h3 class="card-title"><a href="post.html?md=post1">My First Blog Post</a></h3>
+                <p class="post-meta">Published on: <time datetime="2023-10-27">October 27, 2023</time> by Karthik Kaiplody</p>
+                <p class="card-text">This is a short summary of my first exciting blog post where I discuss the journey of building this portfolio and the technologies used. Stay tuned for more insights!</p>
+                <a href="post.html?md=post1" class="button">Read More</a>
+              </div>
+            </div>
+
+            <div class="card blog-post-preview">
+              <div class="card-body">
+                <h3 class="card-title"><a href="post.html?md=post2">Exploring Modern Web Design</a></h3>
+                <p class="post-meta">Published on: <time datetime="2023-11-05">November 05, 2023</time> by Karthik Kaiplody</p>
+                <p class="card-text">A dive into the principles of modern web design, focusing on responsiveness, themes, and user experience. We'll look at some current trends.</p>
+                <a href="post.html?md=post2" class="button">Read More</a>
+              </div>
+            </div>
+            <!-- More posts can be added here -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Karthik Kaiplody. All rights reserved.</p>
+        <p>Built with <i class="fas fa-heart text-danger"></i> by Karthik Kaiplody, under a MIT License.</p>
+        <!-- Old theme switcher removed -->
+    </footer>
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
+        if (menuToggle && navList) {
+            menuToggle.addEventListener('click', () => {
+                navList.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+                const isExpanded = navList.classList.contains('active');
+                menuToggle.setAttribute('aria-expanded', isExpanded);
+            });
+        }
+
+        // REMOVED old theme switcher logic
+
+        // Apply saved theme on page load & Active Nav Link (Theme part handled by theme-switcher.js)
+        document.addEventListener('DOMContentLoaded', () => {
+            // Active Nav Link
+            const blogNavLinks = document.querySelectorAll('nav ul li a[href="blog.html"]');
+            blogNavLinks.forEach(link => {
+                // Check if current page is blog.html or starts with post
+                if (window.location.pathname.endsWith('blog.html') || window.location.pathname.includes('post')) {
+                    link.classList.add('active-nav-link');
+                }
+            });
+        });
+    </script>
+    <script src="static/js/theme-switcher.js"></script>
+</body>
+</html>
