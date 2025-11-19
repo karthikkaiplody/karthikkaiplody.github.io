@@ -1,0 +1,54 @@
+---
+interface Project {
+  title: string;
+  subtitle: string;
+  description: string;
+  tags: string[];
+  link: string;
+  image: string;
+}
+
+const projects: Project[] = [
+  {
+    title: "Machine Learning API",
+    subtitle: "Flask API For Bank Note Authentication Prediction",
+    description: "The objective of the project is to identify whether the given bank note with the selected features are authentic or not. A binary classification problem.",
+    tags: ["Flask", "Python", "sklearn", "Random-Forest", "Binary Classification"],
+    link: "https://github.com/KarthikKaiplody/ML_Apps/tree/master/Bank_Note_Authentication_App",
+    image: "/img/API_screenshot.png"
+  },
+  {
+    title: "MLFlow pipeline",
+    subtitle: "Tracking and Serving the ML models using MLFlow",
+    description: "Tracking and Serving the ML models using MLFlow. Implements ElasticNet Model for Regression.",
+    tags: ["MLFlow", "Python", "sklearn", "ElasticNet", "Regression"],
+    link: "https://github.com/karthikkaiplody/MLFlow-Prod",
+    image: "/img/MLFlow_Dashboard.png"
+  }
+];
+---
+
+<section id="projects" class="space-y-8">
+  <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Projects</h2>
+  <div class="grid gap-8 md:grid-cols-2">
+    {projects.map((project) => (
+      <a href={project.link} target="_blank" class="group block overflow-hidden rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:shadow-lg transition-shadow duration-300">
+        <div class="aspect-video w-full overflow-hidden bg-slate-100 dark:bg-slate-900">
+          <img src={project.image} alt={project.title} class="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105" />
+        </div>
+        <div class="p-6">
+          <h3 class="mb-2 text-xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{project.title}</h3>
+          <p class="mb-4 text-sm text-slate-600 dark:text-slate-400">{project.subtitle}</p>
+          <p class="mb-4 text-sm text-slate-500 dark:text-slate-400 line-clamp-3">{project.description}</p>
+          <div class="flex flex-wrap gap-2">
+            {project.tags.map((tag) => (
+              <span class="inline-flex items-center rounded-full bg-slate-100 dark:bg-slate-700 px-2.5 py-0.5 text-xs font-medium text-slate-800 dark:text-slate-300">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>

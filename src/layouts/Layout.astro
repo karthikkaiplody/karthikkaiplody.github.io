@@ -1,0 +1,48 @@
+---
+import '../styles/global.css';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<!-- Google Fonts: Inter -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-sans antialiased min-h-screen flex flex-col">
+		<header class="py-6 container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl flex justify-between items-center">
+			<a href="/" class="font-bold text-xl tracking-tight">KK.</a>
+			<nav class="flex gap-6">
+				<a href="/" class="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white font-medium">Home</a>
+				<a href="/blog" class="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white font-medium">Blog</a>
+			</nav>
+		</header>
+		<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl py-12">
+			<slot />
+		</main>
+		<footer class="py-6 text-center text-slate-500 text-sm">
+			&copy; {new Date().getFullYear()} Karthik Kaiplody. All rights reserved.
+		</footer>
+	</body>
+</html>
+
+<style>
+	body {
+		font-family: 'Inter', sans-serif;
+	}
+</style>

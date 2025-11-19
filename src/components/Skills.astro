@@ -1,0 +1,38 @@
+---
+const tools = [
+  "Python", "Scikit-learn", "Keras", "TensorFlow", "PyTorch", "NumPy", "Pandas", 
+  "Rasa", "AWS", "SpaCy", "Linux", "MySQL", "PostgreSQL", "Django", "Flask", "DigitalOcean"
+];
+
+const coreSkills = [
+  "Data Pipeline Development",
+  "Object Oriented Programming (OOP)",
+  "NLP & NLU",
+  "Deep Learning",
+  "API Integration & Development"
+];
+---
+
+<section id="skills" class="space-y-8">
+  <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Skills</h2>
+  
+  <div class="space-y-4">
+    <h3 class="text-lg font-semibold text-slate-900 dark:text-white">Languages & Tools</h3>
+    <div class="flex flex-wrap gap-2">
+      {tools.map((tool) => (
+        <span class="inline-flex items-center rounded-md bg-blue-50 dark:bg-blue-900/30 px-2 py-1 text-sm font-medium text-blue-700 dark:text-blue-300 ring-1 ring-inset ring-blue-700/10 dark:ring-blue-400/20">
+          {tool}
+        </span>
+      ))}
+    </div>
+  </div>
+
+  <div class="space-y-4">
+    <h3 class="text-lg font-semibold text-slate-900 dark:text-white">Core Competencies</h3>
+    <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-400">
+      {coreSkills.map((skill) => (
+        <li>{skill}</li>
+      ))}
+    </ul>
+  </div>
+</section>
