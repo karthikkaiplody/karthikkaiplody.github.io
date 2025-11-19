@@ -2,7 +2,6 @@
 title: 'Welcome to my new portfolio!'
 description: 'I have revamped my portfolio using Astro and Tailwind CSS.'
 pubDate: 'Nov 18 2025'
-heroImage: '/blog-placeholder-1.jpg'
 ---
 
 # Welcome
