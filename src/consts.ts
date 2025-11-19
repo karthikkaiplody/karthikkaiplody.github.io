@@ -1,5 +1,5 @@
-export const SITE_TITLE = 'Karthik Kaiplody - Staff AI Engineer Portfolio';
-export const SITE_DESCRIPTION = 'Portfolio and blog of Karthik Kaiplody, a Staff AI Engineer specializing in Machine Learning, Data Science, and Scalable Systems.';
+export const SITE_TITLE = 'Karthik Kaiplody - AI Engineer Portfolio';
+export const SITE_DESCRIPTION = 'Portfolio and blog of Karthik Kaiplody, a AI Engineer experienced in GenAI, LLMOps, Agentic AI and AI Infrastructure.';
 
 export const SOCIAL_LINKS = {
     github: 'https://github.com/KarthikKaiplody/',
