@@ -1,0 +1,78 @@
+---
+interface EducationItem {
+  school: string;
+  degree: string;
+  period: string;
+}
+
+const education: EducationItem[] = [
+  {
+    school: "Illinois Institute of Technology, Chicago",
+    degree: "Masters in Data Science",
+    period: "Fall 2022 - Spring 2024"
+  },
+  {
+    school: "International Institute of Information Technology (IIIT), Bangalore",
+    degree: "PGD - Machine Learning and AI",
+    period: "2020 - 2021"
+  },
+  {
+    school: "GM Institute of Technology - VTU",
+    degree: "Bachelor of Engineering in Electronics and Communication",
+    period: "2012 - 2016"
+  }
+];
+
+const certificates = [
+  "Creating Multi Task Models With Keras (Coursera)",
+  "AWS S3 Basics (Coursera)",
+  "Fine Tune BERT for Text Classification with TensorFlow (Coursera)",
+  "Transfer Learning for NLP with TensorFlow Hub (Coursera)",
+  "Using Databases with Python (Coursera)",
+  "Introduction to Data Science in Python (Coursera)",
+  "Data Structures (Coursera)",
+  "Django 2.2 & Python | The Ultimate Web Development Bootcamp (Udemy)",
+  "Build a Python REST API with the Django Rest Framework (Udemy)"
+];
+
+const achievements = [
+  "Finished top 29% of the leaderboard, Kaggle Competition, TPS - Jan 2021",
+  "Ranked 110th out of 3363 participants, Hacker Earth Deep Learning Challenge",
+  "Awarded 'Project of the Year-2016' from KSCST & IISc, Bangalore"
+];
+---
+
+<div class="grid md:grid-cols-2 gap-12">
+  <section id="education" class="space-y-8">
+    <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Education</h2>
+    <div class="space-y-8">
+      {education.map((edu) => (
+        <div>
+          <h3 class="text-lg font-semibold text-slate-900 dark:text-white">{edu.school}</h3>
+          <p class="text-slate-600 dark:text-slate-400">{edu.degree}</p>
+          <p class="text-sm text-slate-500 dark:text-slate-500">{edu.period}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <div class="space-y-12">
+    <section id="certificates" class="space-y-8">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Certificates</h2>
+      <ul class="list-disc list-inside space-y-2 text-slate-600 dark:text-slate-400 text-sm">
+        {certificates.map((cert) => (
+          <li>{cert}</li>
+        ))}
+      </ul>
+    </section>
+
+    <section id="achievements" class="space-y-8">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Achievements</h2>
+      <ul class="list-disc list-inside space-y-2 text-slate-600 dark:text-slate-400 text-sm">
+        {achievements.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </section>
+  </div>
+</div>
